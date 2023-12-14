@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/headers"/>
+    <qresource prefix="/csv"/>
+    <qresource prefix="/cs"/>
+    <qresource prefix="/">
+        <file>csv.png</file>
+        <file>Munich_airport_logo.svg.png</file>
+        <file>einstellungen.png</file>
+        <file>edit.png</file>
+        <file>Flugdaten.csv</file>
+        <file>testCol.csv.xlsx</file>
+        <file>test.xlsx</file>
+    </qresource>
+</RCC>

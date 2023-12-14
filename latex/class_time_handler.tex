@@ -1,0 +1,136 @@
+\doxysection{Time\+Handler Class Reference}
+\hypertarget{class_time_handler}{}\label{class_time_handler}\index{TimeHandler@{TimeHandler}}
+
+
+The \doxylink{class_time_handler}{Time\+Handler} class provides various methods for time operations.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_time_handler_a051c2ccb11a021596d4c911b66f57970}{get\+Local\+Time}} (string input)
+\begin{DoxyCompactList}\small\item\em Return the input as a local time in the format hh\+:mm\+:ss. The input is in the format dd\+:mm\+:yyyy hh\+:mm\+:ss. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_time_handler_a4f99aea6e160aff110052549a6baba20}{get\+Date}} (string input)
+\begin{DoxyCompactList}\small\item\em Extracts the date of a given string in the format dd\+:mm\+:yyyy hh\+:mm\+:ss and returns it. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_time_handler_aacbb1dca6aade4dfd1d09be4789e3820}{get\+Date\+As\+Format}} ()
+\begin{DoxyCompactList}\small\item\em Converts the input date to a specific format. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_time_handler_ab09c3159821b11ffd2ba96575b7121e7}{get\+UTC}} (const std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em Converts a local time in the format DD.\+MM.\+YYYY HH\+:\+MM\+:SS to UTC time. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_time_handler_aea63ea73414c4c05bda75769c5110511}{refresh\+Date}} ()
+\begin{DoxyCompactList}\small\item\em This function returns an actual date and the old time using boost date. So it only refreshes the date, the time is the same as it was. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_time_handler}{Time\+Handler} class provides various methods for time operations. 
+
+It includes functionalities such as retrieving local time, extracting the date from a time string in the format dd.\+mm.\+yyyy hh\+:mm\+:ss, obtaining the date with the month represented as a name, retrieving the UTC time of a local time, and getting the current date. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_handler_a4f99aea6e160aff110052549a6baba20}\label{class_time_handler_a4f99aea6e160aff110052549a6baba20} 
+\index{TimeHandler@{TimeHandler}!getDate@{getDate}}
+\index{getDate@{getDate}!TimeHandler@{TimeHandler}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily string Time\+Handler\+::get\+Date (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})}
+
+
+
+Extracts the date of a given string in the format dd\+:mm\+:yyyy hh\+:mm\+:ss and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The actual input as a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Returns the date extracted from the input. 
+
+string Return the input if it is empty, so it returns an empty string, which does not affect the calculations. 
+\end{DoxyReturn}
+If the input is not empty and the input matches a date pattern, then extract the day, month and year from the string with substr and form a new date. Then return the date.\Hypertarget{class_time_handler_aacbb1dca6aade4dfd1d09be4789e3820}\label{class_time_handler_aacbb1dca6aade4dfd1d09be4789e3820} 
+\index{TimeHandler@{TimeHandler}!getDateAsFormat@{getDateAsFormat}}
+\index{getDateAsFormat@{getDateAsFormat}!TimeHandler@{TimeHandler}}
+\doxysubsubsection{\texorpdfstring{getDateAsFormat()}{getDateAsFormat()}}
+{\footnotesize\ttfamily string Time\+Handler\+::get\+Date\+As\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts the input date to a specific format. 
+
+This function takes a date string as input, splits it into components, and then formats it into a specific format. The format is "{}day.\+month.\+year"{}. If the input string is empty, the function returns the current date in the specified format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input date string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formatted date string. 
+\end{DoxyReturn}
+\Hypertarget{class_time_handler_a051c2ccb11a021596d4c911b66f57970}\label{class_time_handler_a051c2ccb11a021596d4c911b66f57970} 
+\index{TimeHandler@{TimeHandler}!getLocalTime@{getLocalTime}}
+\index{getLocalTime@{getLocalTime}!TimeHandler@{TimeHandler}}
+\doxysubsubsection{\texorpdfstring{getLocalTime()}{getLocalTime()}}
+{\footnotesize\ttfamily string Time\+Handler\+::get\+Local\+Time (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})}
+
+
+
+Return the input as a local time in the format hh\+:mm\+:ss. The input is in the format dd\+:mm\+:yyyy hh\+:mm\+:ss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input date and time as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Returns the local time as a string 
+
+input Returns the input if it cannot find a space in the input. 
+\end{DoxyReturn}
+\Hypertarget{class_time_handler_ab09c3159821b11ffd2ba96575b7121e7}\label{class_time_handler_ab09c3159821b11ffd2ba96575b7121e7} 
+\index{TimeHandler@{TimeHandler}!getUTC@{getUTC}}
+\index{getUTC@{getUTC}!TimeHandler@{TimeHandler}}
+\doxysubsubsection{\texorpdfstring{getUTC()}{getUTC()}}
+{\footnotesize\ttfamily std\+::string Time\+Handler\+::get\+UTC (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Converts a local time in the format DD.\+MM.\+YYYY HH\+:\+MM\+:SS to UTC time. 
+
+This function takes a local time string as input, checks if it\textquotesingle{}s not empty, and then extracts and converts the date and time components to UTC. The input string is first trimmed on the right. Then, the year, day, and month are extracted from the date part of the string. The hour, minute, and second are extracted from the time part of the string. A local time is created with these values, and a time zone for Germany (CET+01\+:00\+:00) is applied to it. The local time is then converted to UTC and returned as a string. If any part of the date or time is invalid, an error message is shown with exc() and the function returns an empty string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input local time string in the format DD.\+MM.\+YYYY HH\+:\+MM\+:SS. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted UTC time string if the input matches the expected format and all date and time components are valid; otherwise, an empty string. 
+\end{DoxyReturn}
+\Hypertarget{class_time_handler_aea63ea73414c4c05bda75769c5110511}\label{class_time_handler_aea63ea73414c4c05bda75769c5110511} 
+\index{TimeHandler@{TimeHandler}!refreshDate@{refreshDate}}
+\index{refreshDate@{refreshDate}!TimeHandler@{TimeHandler}}
+\doxysubsubsection{\texorpdfstring{refreshDate()}{refreshDate()}}
+{\footnotesize\ttfamily string Time\+Handler\+::refresh\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns an actual date and the old time using boost date. So it only refreshes the date, the time is the same as it was. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & This is the input as format dd.\+mm.\+yyyy hh.\+mm.\+ss.\+a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Returns the current date 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Time\+Handler.\+h\item 
+Time\+Handler.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\doxysection{Custom\+Item\+Delegate Class Reference}
+\hypertarget{class_custom_item_delegate}{}\label{class_custom_item_delegate}\index{CustomItemDelegate@{CustomItemDelegate}}
+
+
+The \doxylink{class_custom_item_delegate}{Custom\+Item\+Delegate} class extends QStyled\+Item\+Delegate and is used for painting the table which shows the flights. The table is a QTable\+View.  
+
+
+
+
+{\ttfamily \#include $<$customitemdelegate.\+h$>$}
+
+Inheritance diagram for Custom\+Item\+Delegate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_custom_item_delegate}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_item_delegate_ad82742a2a92ca47b34cf77442c6dbac8}{Custom\+Item\+Delegate}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_custom_item_delegate}{Custom\+Item\+Delegate} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_custom_item_delegate_af99d6264377a681a997997cb6ec44592}{paint}} (QPainter \texorpdfstring{$\ast$}{*}painter, const QStyle\+Option\+View\+Item \&option, const QModel\+Index \&index) const override
+\begin{DoxyCompactList}\small\item\em Overridden function to paint items with the specified colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_custom_item_delegate}{Custom\+Item\+Delegate} class extends QStyled\+Item\+Delegate and is used for painting the table which shows the flights. The table is a QTable\+View. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_custom_item_delegate_ad82742a2a92ca47b34cf77442c6dbac8}\label{class_custom_item_delegate_ad82742a2a92ca47b34cf77442c6dbac8} 
+\index{CustomItemDelegate@{CustomItemDelegate}!CustomItemDelegate@{CustomItemDelegate}}
+\index{CustomItemDelegate@{CustomItemDelegate}!CustomItemDelegate@{CustomItemDelegate}}
+\doxysubsubsection{\texorpdfstring{CustomItemDelegate()}{CustomItemDelegate()}}
+{\footnotesize\ttfamily Custom\+Item\+Delegate\+::\+Custom\+Item\+Delegate (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a new \doxylink{class_custom_item_delegate}{Custom\+Item\+Delegate} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QObject. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_custom_item_delegate_af99d6264377a681a997997cb6ec44592}\label{class_custom_item_delegate_af99d6264377a681a997997cb6ec44592} 
+\index{CustomItemDelegate@{CustomItemDelegate}!paint@{paint}}
+\index{paint@{paint}!CustomItemDelegate@{CustomItemDelegate}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Custom\+Item\+Delegate\+::paint (\begin{DoxyParamCaption}\item[{QPainter \texorpdfstring{$\ast$}{*}}]{painter,  }\item[{const QStyle\+Option\+View\+Item \&}]{option,  }\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Overridden function to paint items with the specified colors. 
+
+Paints the delegate using the given painter and style option for the item specified by index. So in our application it paints the rows of the QTable\+View.
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Pointer to the QPainter object for painting. \\
+\hline
+{\em option} & Style options for the item view. \\
+\hline
+{\em index} & Index of the item to be painted.\\
+\hline
+{\em painter} & The QPainter object. \\
+\hline
+{\em option} & The QStyle\+Option\+View\+Item object. \\
+\hline
+{\em index} & The QModel\+Index object. \\
+\hline
+\end{DoxyParams}
+Paint every odd row in light blue and every even row in dark blue and set the text color to white
+
+Calls the paint method of the base class QStyled\+Item\+Delegate.
+
+This allows the base class to perform its standard painting operations. It\textquotesingle{}s a common pattern when you\textquotesingle{}re overriding a method but still want the base functionality to be executed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & The QPainter object. \\
+\hline
+{\em updated\+Option} & The modified QStyle\+Option\+View\+Item object. \\
+\hline
+{\em index} & The QModel\+Index object.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+customitemdelegate.\+h\item 
+customitemdelegate.\+cpp\end{DoxyCompactItemize}

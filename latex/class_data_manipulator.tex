@@ -1,0 +1,123 @@
+\doxysection{Data\+Manipulator Class Reference}
+\hypertarget{class_data_manipulator}{}\label{class_data_manipulator}\index{DataManipulator@{DataManipulator}}
+
+
+The \doxylink{class_data_manipulator}{Data\+Manipulator} class provies convenient methods to manipulate data in the current flights table. You are able to set a new intern time, new terminal, new status, new position and you can provide a label with the flight information. Specifically, the label is located in the "{}\+Flug ändern"{} section, so in the Dialog, where you can change a flight. And the Dialog is implemented in mainwindow.\+cpp.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Manipulator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_manipulator_a6ebde9a1de6a4bbbcee74affe22e45cd}{set\+ITT}} (string itt, int row)
+\begin{DoxyCompactList}\small\item\em Sets the new ITT (intern time) for a specific row. So you do not have to call show\+Flights to refresh the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manipulator_a2f23a321fb9434c9c57f51e19fa343d4}{set\+POS}} (string pos, int row)
+\begin{DoxyCompactList}\small\item\em Sets the new positon of the airplane. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manipulator_a64e3b6a885d575c2cfe0c2aff136a6a7}{set\+Label\+Info}} (QLabel \&l, string \&input)
+\begin{DoxyCompactList}\small\item\em Sets label information based on flight details. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manipulator_af38a73ffcba13074f78b267fa74582e6}{set\+TER}} (string ter, int row)
+\begin{DoxyCompactList}\small\item\em Sets the new terminal of the airplane. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manipulator_a6dcbaa5bd8a33b1b697b2f5af5a1898d}{set\+STA}} (string sta, int row)
+\begin{DoxyCompactList}\small\item\em set\+STA Sets the new status of the airplane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_data_manipulator}{Data\+Manipulator} class provies convenient methods to manipulate data in the current flights table. You are able to set a new intern time, new terminal, new status, new position and you can provide a label with the flight information. Specifically, the label is located in the "{}\+Flug ändern"{} section, so in the Dialog, where you can change a flight. And the Dialog is implemented in mainwindow.\+cpp. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_manipulator_a6ebde9a1de6a4bbbcee74affe22e45cd}\label{class_data_manipulator_a6ebde9a1de6a4bbbcee74affe22e45cd} 
+\index{DataManipulator@{DataManipulator}!setITT@{setITT}}
+\index{setITT@{setITT}!DataManipulator@{DataManipulator}}
+\doxysubsubsection{\texorpdfstring{setITT()}{setITT()}}
+{\footnotesize\ttfamily void Data\+Manipulator\+::set\+ITT (\begin{DoxyParamCaption}\item[{string}]{itt,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Sets the new ITT (intern time) for a specific row. So you do not have to call show\+Flights to refresh the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itt} & The new ITT as a string. \\
+\hline
+{\em row} & The row, in which the new ITT has to be refreshed, as an int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_data_manipulator_a64e3b6a885d575c2cfe0c2aff136a6a7}\label{class_data_manipulator_a64e3b6a885d575c2cfe0c2aff136a6a7} 
+\index{DataManipulator@{DataManipulator}!setLabelInfo@{setLabelInfo}}
+\index{setLabelInfo@{setLabelInfo}!DataManipulator@{DataManipulator}}
+\doxysubsubsection{\texorpdfstring{setLabelInfo()}{setLabelInfo()}}
+{\footnotesize\ttfamily void Data\+Manipulator\+::set\+Label\+Info (\begin{DoxyParamCaption}\item[{QLabel \&}]{l,  }\item[{string \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Sets label information based on flight details. 
+
+This function trims the input string and iterates over all flights. If the fnr or knr of a flight matches the input, it constructs a string with various flight details and sets this as the text of the label.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The QLabel to be updated. \\
+\hline
+{\em input} & The input string used to match fnr or knr of flights. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_data_manipulator_a2f23a321fb9434c9c57f51e19fa343d4}\label{class_data_manipulator_a2f23a321fb9434c9c57f51e19fa343d4} 
+\index{DataManipulator@{DataManipulator}!setPOS@{setPOS}}
+\index{setPOS@{setPOS}!DataManipulator@{DataManipulator}}
+\doxysubsubsection{\texorpdfstring{setPOS()}{setPOS()}}
+{\footnotesize\ttfamily void Data\+Manipulator\+::set\+POS (\begin{DoxyParamCaption}\item[{string}]{pos,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Sets the new positon of the airplane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The new position as a string \\
+\hline
+{\em row} & The row, in which the new POS has to be refreshed, as an int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_data_manipulator_a6dcbaa5bd8a33b1b697b2f5af5a1898d}\label{class_data_manipulator_a6dcbaa5bd8a33b1b697b2f5af5a1898d} 
+\index{DataManipulator@{DataManipulator}!setSTA@{setSTA}}
+\index{setSTA@{setSTA}!DataManipulator@{DataManipulator}}
+\doxysubsubsection{\texorpdfstring{setSTA()}{setSTA()}}
+{\footnotesize\ttfamily void Data\+Manipulator\+::set\+STA (\begin{DoxyParamCaption}\item[{string}]{sta,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+set\+STA Sets the new status of the airplane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sta} & The status as a string. \\
+\hline
+{\em row} & The row, in which the new SAA has to be refreshed, as an int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_data_manipulator_af38a73ffcba13074f78b267fa74582e6}\label{class_data_manipulator_af38a73ffcba13074f78b267fa74582e6} 
+\index{DataManipulator@{DataManipulator}!setTER@{setTER}}
+\index{setTER@{setTER}!DataManipulator@{DataManipulator}}
+\doxysubsubsection{\texorpdfstring{setTER()}{setTER()}}
+{\footnotesize\ttfamily void Data\+Manipulator\+::set\+TER (\begin{DoxyParamCaption}\item[{string}]{ter,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Sets the new terminal of the airplane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ter} & The new terminal as a string. \\
+\hline
+{\em row} & The row, in which the new TER has to be refreshed, as an int. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Manipulator.\+h\item 
+Data\+Manipulator.\+cpp\end{DoxyCompactItemize}

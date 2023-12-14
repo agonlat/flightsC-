@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>csv.png</file>
+        <file>edit.png</file>
+        <file>einstellungen.png</file>
+        <file>Munich_airport_logo.svg.png</file>
+        <file>colour.png</file>
+        <file>analytics.png</file>
+        <file>file.png</file>
+        <file>monitor.png</file>
+    </qresource>
+</RCC>

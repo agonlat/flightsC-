@@ -1,0 +1,72 @@
+\doxysection{File\+Handler Class Reference}
+\hypertarget{class_file_handler}{}\label{class_file_handler}\index{FileHandler@{FileHandler}}
+
+
+The \doxylink{class_file_handler}{File\+Handler} class provides methods to read a csv file, to show flights and to export the current flights as csv-\/fromat.  
+
+
+
+
+{\ttfamily \#include $<$File\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_file_handler_ad0efafb3aeb921316421613e0266eca2}{read\+File\+To\+Vec}} (string path)
+\begin{DoxyCompactList}\small\item\em Reads a file from a given path and stores the data in all\+Flights. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_file_handler_a9e6f4a1bc148e1775f569e2f3105a7e9}{show\+Flights}} (vector$<$ \mbox{\hyperlink{structflights}{flights}} $>$ Flights)
+\begin{DoxyCompactList}\small\item\em Shows all Flights in the table\+View. It takes a vector of flights and refreshes the table accordingly. \end{DoxyCompactList}\item 
+\Hypertarget{class_file_handler_aa779eb6f4a5802be9d1f8868634d9f3c}\label{class_file_handler_aa779eb6f4a5802be9d1f8868634d9f3c} 
+void {\bfseries export\+File\+To\+CSV} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_file_handler}{File\+Handler} class provides methods to read a csv file, to show flights and to export the current flights as csv-\/fromat. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_handler_ad0efafb3aeb921316421613e0266eca2}\label{class_file_handler_ad0efafb3aeb921316421613e0266eca2} 
+\index{FileHandler@{FileHandler}!readFileToVec@{readFileToVec}}
+\index{readFileToVec@{readFileToVec}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{readFileToVec()}{readFileToVec()}}
+{\footnotesize\ttfamily int File\+Handler\+::read\+File\+To\+Vec (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Reads a file from a given path and stores the data in all\+Flights. 
+
+It checks if the CSV file contains 12 columns. If not, it does not crash and calls {\ttfamily exc()} with an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 If the file was read successfully. 
+
+0 If the file could not be opened. 
+
+-\/2 If the file has not 12 columns 
+\end{DoxyReturn}
+\Hypertarget{class_file_handler_a9e6f4a1bc148e1775f569e2f3105a7e9}\label{class_file_handler_a9e6f4a1bc148e1775f569e2f3105a7e9} 
+\index{FileHandler@{FileHandler}!showFlights@{showFlights}}
+\index{showFlights@{showFlights}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{showFlights()}{showFlights()}}
+{\footnotesize\ttfamily void File\+Handler\+::show\+Flights (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structflights}{flights}} $>$}]{Flights }\end{DoxyParamCaption})}
+
+
+
+Shows all Flights in the table\+View. It takes a vector of flights and refreshes the table accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Flights} & Is the vector of a struct "{}flights"{} to be shown. \\
+\hline
+\end{DoxyParams}
+You need QStandard\+Items in order to add it to the QTable\+View
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+File\+Handler.\+h\item 
+File\+Handler.\+cpp\end{DoxyCompactItemize}

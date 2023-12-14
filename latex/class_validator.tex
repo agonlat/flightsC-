@@ -1,0 +1,96 @@
+\doxysection{Validator Class Reference}
+\hypertarget{class_validator}{}\label{class_validator}\index{Validator@{Validator}}
+
+
+The \doxylink{class_validator}{Validator} class provides methods to check various strings, if they are valid, such as flight number or control number, intern time and the position.  
+
+
+
+
+{\ttfamily \#include $<$Validator.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_validator_a6105bb9f78f2f96542711b7aecd47839}{check\+NR}} (string input)
+\begin{DoxyCompactList}\small\item\em Checks a given number as a string for its validity. The input is a flight\+NO or Control\+NO. This function uses a regex pattern to match the input. The input should be like the following examples, in order to be accepted\+: LH 2309, LH 204 or LH 9851F. So two chars at the beginning, one space and three or four digits and an optional char at the end. Be careful! This function calls exc("{}..."{}) if something went wrong, so it calls an Error Dialog (a small frame containg some information, what went wrong). \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_validator_a31876b1bdb4bb6d18b223f70ab98f901}{check\+ITT}} (string tim1, string tim2)
+\begin{DoxyCompactList}\small\item\em Checks if two strings tim1 and tim2 (in real\+: new time ITT and old time ITT. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_validator_a2724ddbd492c89978c44d7896f91bd80}{check\+POS}} (string input)
+\begin{DoxyCompactList}\small\item\em Checks if input (in real\+:Position) is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_validator}{Validator} class provides methods to check various strings, if they are valid, such as flight number or control number, intern time and the position. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_validator_a31876b1bdb4bb6d18b223f70ab98f901}\label{class_validator_a31876b1bdb4bb6d18b223f70ab98f901} 
+\index{Validator@{Validator}!checkITT@{checkITT}}
+\index{checkITT@{checkITT}!Validator@{Validator}}
+\doxysubsubsection{\texorpdfstring{checkITT()}{checkITT()}}
+{\footnotesize\ttfamily int Validator\+::check\+ITT (\begin{DoxyParamCaption}\item[{string}]{tim1,  }\item[{string}]{tim2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if two strings tim1 and tim2 (in real\+: new time ITT and old time ITT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tim1} & new ITT \\
+\hline
+{\em tim2} & old ITT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 If new tim1 is not valid or at errors 
+
+1 If new itt is valid and GREATER than the old itt. 
+\end{DoxyReturn}
+\Hypertarget{class_validator_a6105bb9f78f2f96542711b7aecd47839}\label{class_validator_a6105bb9f78f2f96542711b7aecd47839} 
+\index{Validator@{Validator}!checkNR@{checkNR}}
+\index{checkNR@{checkNR}!Validator@{Validator}}
+\doxysubsubsection{\texorpdfstring{checkNR()}{checkNR()}}
+{\footnotesize\ttfamily int Validator\+::check\+NR (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks a given number as a string for its validity. The input is a flight\+NO or Control\+NO. This function uses a regex pattern to match the input. The input should be like the following examples, in order to be accepted\+: LH 2309, LH 204 or LH 9851F. So two chars at the beginning, one space and three or four digits and an optional char at the end. Be careful! This function calls exc("{}..."{}) if something went wrong, so it calls an Error Dialog (a small frame containg some information, what went wrong). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & input input is the string to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 Returns 0 when there occurs and error or a flight is not found. 
+
+1 Returns 1 if everything went okay. 
+\end{DoxyReturn}
+\Hypertarget{class_validator_a2724ddbd492c89978c44d7896f91bd80}\label{class_validator_a2724ddbd492c89978c44d7896f91bd80} 
+\index{Validator@{Validator}!checkPOS@{checkPOS}}
+\index{checkPOS@{checkPOS}!Validator@{Validator}}
+\doxysubsubsection{\texorpdfstring{checkPOS()}{checkPOS()}}
+{\footnotesize\ttfamily int Validator\+::check\+POS (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if input (in real\+:Position) is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 If input is empty. 
+
+1 If input is non-\/empty and valid. 
+
+0 If input is invalid. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Validator.\+h\item 
+Validator.\+cpp\end{DoxyCompactItemize}

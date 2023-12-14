@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/cs"/>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/"/>
+</RCC>

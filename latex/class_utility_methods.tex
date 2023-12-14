@@ -1,0 +1,86 @@
+\doxysection{Utility\+Methods Class Reference}
+\hypertarget{class_utility_methods}{}\label{class_utility_methods}\index{UtilityMethods@{UtilityMethods}}
+
+
+The \doxylink{class_utility_methods}{Utility\+Methods} class provides convenient helper methods, which are needed for other operations.  
+
+
+
+
+{\ttfamily \#include $<$utilitymethods.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_utility_methods_a242072545ce12e575359a9a476f78124}{remove\+Extra\+Spaces}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Removes extra spaces from the given input string. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_utility_methods_a6164ae52171b7faefa8aa94c7e8069c5}{exc}} (std\+::string info)
+\begin{DoxyCompactList}\small\item\em Opens a QMessage\+Box that shows information that is given as argument. It has an error style. \end{DoxyCompactList}\item 
+\Hypertarget{class_utility_methods_ad30ffa6f563434886290a536ba876294}\label{class_utility_methods_ad30ffa6f563434886290a536ba876294} 
+static std\+::string {\bfseries get\+Airline} (std\+::string str)
+\item 
+static std\+::string \mbox{\hyperlink{class_utility_methods_a54f7cd6bed9c79085a2dc27527c8ab30}{find\+Airline\+Name\+\_\+and\+\_\+most\+Flights}} (const std\+::map$<$ std\+::string, int $>$ \&input\+Map)
+\begin{DoxyCompactList}\small\item\em Finds the airline which operates the most flights in the table of all flights and returns it in the format \texorpdfstring{$<$}{<}\mbox{[}airline\+Name\mbox{]}\+: \mbox{[}flights\mbox{]}\texorpdfstring{$>$}{>} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_utility_methods}{Utility\+Methods} class provides convenient helper methods, which are needed for other operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_utility_methods_a6164ae52171b7faefa8aa94c7e8069c5}\label{class_utility_methods_a6164ae52171b7faefa8aa94c7e8069c5} 
+\index{UtilityMethods@{UtilityMethods}!exc@{exc}}
+\index{exc@{exc}!UtilityMethods@{UtilityMethods}}
+\doxysubsubsection{\texorpdfstring{exc()}{exc()}}
+{\footnotesize\ttfamily void Utility\+Methods\+::exc (\begin{DoxyParamCaption}\item[{std\+::string}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Opens a QMessage\+Box that shows information that is given as argument. It has an error style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & This is the information that has to be displayed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_utility_methods_a54f7cd6bed9c79085a2dc27527c8ab30}\label{class_utility_methods_a54f7cd6bed9c79085a2dc27527c8ab30} 
+\index{UtilityMethods@{UtilityMethods}!findAirlineName\_and\_mostFlights@{findAirlineName\_and\_mostFlights}}
+\index{findAirlineName\_and\_mostFlights@{findAirlineName\_and\_mostFlights}!UtilityMethods@{UtilityMethods}}
+\doxysubsubsection{\texorpdfstring{findAirlineName\_and\_mostFlights()}{findAirlineName\_and\_mostFlights()}}
+{\footnotesize\ttfamily std\+::string Utility\+Methods\+::find\+Airline\+Name\+\_\+and\+\_\+most\+Flights (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, int $>$ \&}]{input\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds the airline which operates the most flights in the table of all flights and returns it in the format \texorpdfstring{$<$}{<}\mbox{[}airline\+Name\mbox{]}\+: \mbox{[}flights\mbox{]}\texorpdfstring{$>$}{>} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Map} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_utility_methods_a242072545ce12e575359a9a476f78124}\label{class_utility_methods_a242072545ce12e575359a9a476f78124} 
+\index{UtilityMethods@{UtilityMethods}!removeExtraSpaces@{removeExtraSpaces}}
+\index{removeExtraSpaces@{removeExtraSpaces}!UtilityMethods@{UtilityMethods}}
+\doxysubsubsection{\texorpdfstring{removeExtraSpaces()}{removeExtraSpaces()}}
+{\footnotesize\ttfamily std\+::string Utility\+Methods\+::remove\+Extra\+Spaces (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes extra spaces from the given input string. 
+
+This method eliminates extra spaces within the input string. It loops through the characters and skips whitespace characters according to certain conditions. At the end only one space is permitted and left within the string. If we have LH 2309 and call this method on this string, it returns LH 2309, so one space less. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The input string containing spaces to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string with extra spaces removed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+utilitymethods.\+h\item 
+utilitymethods.\+cpp\end{DoxyCompactItemize}
